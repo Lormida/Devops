@@ -19,7 +19,7 @@ export default {
   },
   created: async function () {
     this.startInterval()
-    const res = await fetch('http://localhost:5555/times')
+    const res = await fetch('/api/times')
     const json = await res.json()
     if (json.length) this.savedTimes = json
   },

@@ -8,7 +8,7 @@ function startInterval() {
 
 async function saveTime() {
   const time = this.currentTime
-  const res = await fetch('http://localhost:5555/times', {
+  const res = await fetch('/api/times', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ async function saveTime() {
 }
 
 async function deleteTime(id) {
-  const res = await fetch(`http://localhost:5555/time/${id}`, {
+  const res = await fetch(`/api/time/${id}`, {
     method: 'DELETE',
   })
   const json = await res.json()

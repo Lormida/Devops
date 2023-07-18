@@ -17,10 +17,12 @@ app.use((req, res, next) => {
 
 app.use(userRoutes);
 
+
+
 app.use((err, req, res, next) => {
   let code = 500;
   let message = 'Something went wrong.';
-  if (err.code) {
+  if (err.code) { 
     code = err.code;
   }
 
